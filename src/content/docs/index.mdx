@@ -1,0 +1,36 @@
+---
+title: Astro OpenDocs Template
+description: A state-of-the-art documentation template built with Astro and Starlight.
+template: splash
+hero:
+  tagline: A reusable Astro + Starlight + OpenDocs documentation template.
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Get Started
+      link: guides/getting-started/
+      icon: right-arrow
+    - text: View GitHub
+      link: https://github.com/svallory/astro-opendocs-template
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Why this template?
+
+<CardGrid stagger>
+	<Card title="TypeScript First" icon="pencil">
+		Middleware and components are written in TypeScript for maximum reliability and developer experience.
+	</Card>
+	<Card title="Modular Middleware" icon="setting">
+		Easily toggle features like custom JSON schema headers with our modular middleware sequence.
+	</Card>
+	<Card title="Components" icon="add-document">
+		Includes ready-to-use components like `TeamMemberCard` and `JsonSchemaViewer`.
+	</Card>
+	<Card title="LLM Friendly" icon="open-book">
+		Pre-configured with AI-friendly tools to help LLMs understand your documentation.
+	</Card>
+</CardGrid>

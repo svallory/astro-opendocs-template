@@ -1,0 +1,64 @@
+---
+title: Getting Started
+description: How to use this template to jumpstart your documentation project.
+---
+
+Welcome to the **Astro OpenDocs Template**! This guide will help you get up and running in minutes.
+
+## 1. Quick Start
+
+This template is designed to be used as a GitHub Template.
+
+1.  Navigate to the [astro-opendocs-template](https://github.com/svallory/astro-opendocs-template) repository.
+2.  Click the **"Use this template"** button.
+3.  Choose **"Create a new repository"**.
+4.  Clone your new repository and run:
+
+```bash
+npm install
+npm run dev
+```
+
+## 2. Configuration
+
+Open `astro.config.mjs` to customize your site:
+
+```javascript
+export default defineConfig({
+  site: 'https://your-site.com',
+  integrations: [
+    starlight({
+      title: 'Your Site Name',
+      // ...
+    }),
+  ],
+});
+```
+
+## 3. Modular Middleware
+
+One of the unique features of this template is the **Modular Middleware**. You can find it in `src/middleware/`.
+
+To enable/disable features, edit the `sequence` in `src/middleware.ts`:
+
+```typescript
+export const onRequest = sequence(
+  schemaHeaders, // Handles .schema.json content-type and CORS
+  // ...
+);
+```
+
+## 4. Custom Components
+
+This template comes with components ready to use in your MDX files. Check out the [Components Reference](/reference/components/) for details.
+
+## 5. Smart Linking (Auto-Base Path)
+
+If you deploy your site to a subpath (e.g., GitHub Pages), you usually have to worry about prefixing all your links with that path. 
+
+**This template handles that for you.** You can use standard root-relative links in your Markdown, and our custom Remark plugin will automatically prepend the correct base path during build:
+
+```md
+<!-- This will automatically become /astro-opendocs-template/reference/components/ -->
+Check out our [components](/reference/components/).
+```

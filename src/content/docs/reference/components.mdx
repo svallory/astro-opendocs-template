@@ -1,0 +1,63 @@
+---
+title: Components Reference
+description: Documentation for the custom components included in this template.
+---
+
+import TeamMemberCard from '../../../components/TeamMemberCard.astro';
+import JsonSchemaViewer from '../../../components/JsonSchemaViewer';
+
+This template includes several pre-built components to help you build beautiful documentation.
+
+## TeamMemberCard
+
+The `TeamMemberCard` is perfect for showcasing your project's contributors or leadership.
+
+### Example
+
+<TeamMemberCard
+  name="Saulo Vallory"
+  role="CTO at Toki Labs | Social Alchemist"
+  bio="Senior Software Engineer and Architect with 20 years of experience. Driven by the power of technology to transform lives and thrive in complexity."
+  avatar="https://saulo.engineer/images/portrait.jpg"
+  github="svallory"
+  website="https://saulo.engineer"
+  twitter="svallory"
+  location="Global"
+/>
+
+### Usage
+
+```astro
+import TeamMemberCard from '../path/to/TeamMemberCard.astro';
+
+<TeamMemberCard
+  name="Name"
+  role="Role"
+  bio="Bio description..."
+  avatar="/path/to/avatar.png"
+  github="username"
+/>
+```
+
+---
+
+## JsonSchemaViewer
+
+A React-based component to visualize JSON schemas effortlessly, powered by Stoplight.
+
+### Example
+
+(Coming soon: Add an example JSON schema to your `public/` folder to see it in action!)
+
+### Usage
+
+```astro
+import JsonSchemaViewer from '../path/to/JsonSchemaViewer';
+
+<JsonSchemaViewer
+  name="User Schema"
+  schemaUrl="/schemas/user.schema.json"
+/>
+```
+
+Note: This component requires React integration (enabled by default in this template).

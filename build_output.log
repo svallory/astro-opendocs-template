@@ -1,0 +1,96 @@
+
+> starlight-template@0.1.0 build
+> astro build
+
+13:37:53 [starlight-links-validator-plugin] Invalidating content layer cache…
+13:37:53 [content] Syncing content
+13:37:53 [content] Synced content
+13:37:53 [types] Generated 301ms
+13:37:53 [build] output: "static"
+13:37:53 [build] mode: "static"
+13:37:53 [build] directory: /work/templates/starlight/dist/
+13:37:53 [build] Collecting build info...
+13:37:53 [build] ✓ Completed in 406ms.
+13:37:53 [build] Building static entrypoints...
+13:37:55 [vite] ✓ built in 1.22s
+13:37:55 [build] ✓ Completed in 1.24s.
+
+ building client (vite) 
+13:37:55 [vite] transforming...
+13:37:55 [vite] ✓ 38 modules transformed.
+13:37:55 [vite] rendering chunks...
+13:37:55 [vite] computing gzip size...
+13:37:55 [vite] dist/_astro/ec.p1z7b.js                                                               2.48 kB
+13:37:55 [vite] dist/_astro/ec.v4551.css                                                             18.22 kB │ gzip:   3.96 kB
+13:37:55 [vite] dist/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.C181hMzK.js    0.67 kB │ gzip:   0.40 kB
+13:37:55 [vite] dist/_astro/TableOfContents.astro_astro_type_script_index_0_lang.CKWWgpjV.js          1.67 kB │ gzip:   0.86 kB
+13:37:55 [vite] dist/_astro/page.BJIqRAvy.js                                                          2.33 kB │ gzip:   1.04 kB
+13:37:55 [vite] dist/_astro/client.T6rZ-R-7.js                                                      386.72 kB │ gzip: 116.16 kB
+13:37:55 [vite] ✓ built in 744ms
+
+ generating static routes 
+13:37:55 λ starlight-llms-txt/llms-custom.txt.ts
+13:37:55 ▶ @astrojs/starlight/routes/static/404.astro
+13:37:55   └─ /404.htmlEntry docs → 404 was not found.
+ (+42ms) 
+13:37:55 λ starlight-llms-txt/llms-full.txt.ts
+13:37:55   └─ /llms-full.txt (+53ms) 
+13:37:56 λ starlight-llms-txt/llms-small.txt.ts
+13:37:56   └─ /llms-small.txt (+27ms) 
+13:37:56 λ starlight-llms-txt/llms.txt.ts
+13:37:56   └─ /llms.txt (+1ms) 
+13:37:56 ▶ @astrojs/starlight/routes/static/index.astro
+13:37:56   ├─ /guides/getting-started/index.html (+5ms) 
+13:37:56   ├─ /reference/components/index.html (+3ms) 
+13:37:56   └─ /index.html (+5ms) 
+13:37:56 ✓ Completed in 227ms.
+
+ generating optimized images 
+13:37:56   ▶ /_astro/houston.CZZyCf7p_masRk.webp (reused cache entry) (+1ms) (1/1)
+13:37:56 ✓ Completed in 1ms.
+
+
+Running Pagefind v1.3.0 (Extended)
+Running from: "/work/templates/starlight/node_modules/@astrojs/starlight"
+Source:       "../../../dist"
+Output:       "../../../dist/pagefind"
+
+[Walking source directory]
+Found 4 files matching **/*.{html}
+
+[Parsing files]
+Found a data-pagefind-body element on the site.
+↳ Ignoring pages without this tag.
+
+[Reading languages]
+Discovered 1 language: en
+
+[Building search indexes]
+Total: 
+  Indexed 1 language
+  Indexed 3 pages
+  Indexed 223 words
+  Indexed 0 filters
+  Indexed 0 sorts
+
+Finished in 0.033 seconds
+
+ validating links 
+13:37:56 [ERROR] ✗ Found 1 invalid link in 1 file.
+13:37:56 ▶ astro-opendocs-template/guides/getting-started/
+13:37:56   └─ ../../reference/components/ - relative link
+
+13:37:56 [ERROR] [starlight-links-validator-integration] An unhandled error occurred while running the "astro:build:done" hook
+[AstroUserError] Links validation failed.
+  Hint:
+    See the error report above for more informations.
+    
+    If you believe this is a bug, please file an issue at https://github.com/HiDeoo/starlight-links-validator/issues/new/choose
+  Location:
+    /work/templates/starlight/node_modules/starlight-links-validator/index.ts:78:9
+  Stack trace:
+    at throwPluginError (/work/templates/starlight/node_modules/starlight-links-validator/index.ts:78:9)
+    at hookFn (file:///work/templates/starlight/node_modules/astro/dist/integrations/hooks.js:54:21)
+    at runHookInternal (file:///work/templates/starlight/node_modules/astro/dist/integrations/hooks.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AstroBuilder.run (file:///work/templates/starlight/node_modules/astro/dist/core/build/index.js:185:7)
